@@ -1,4 +1,18 @@
+// How to create a Linked list by adding element at the start , by adding element at end and by adding element in between
+// This code uses a very good concepts of pointer and checks every senario that can come in your mind while playing with the linked list
+// Theory -> A linked list is a way to store data in the heap , in which a there are Nodes interlinked with each other
+ //          Node contains one data element and one Node pointer to point the next node in the heap memory
+//          In LinkedList memory is not stored in the contiguous way it takes twice the size of an array .
+//          It has a wide use while there is a brief operation of insertion and deletion 
+//          This linked list is created using malloc function , so the node meomory continues to exist until it is deallocated with a call to free( Node name);
+
+... // Here we will see various ways to delete an element in the linked list 
+	// Deletion of first element
+	// Deletion of last element
+	// Deletion In between 
+// Note : Here the first element to is considered with a postion 0.
 #include<iostream>
+
 #include<stdlib.h>
 
 using namespace std;
@@ -109,7 +123,7 @@ void Delete(ListNode** head,int position){
         free(pred);
         return;
     }
-    while(position-- && pred->next != NULL){
+    while(position-- && pred->next != NULL){ // --position  in the loop if youre considering the starting element at position 1.
         q = pred; 
         pred = pred->next;
     }
