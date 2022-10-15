@@ -12,6 +12,18 @@
             -> Create a temproary Node which will point to the same node as that of head.
             -> Now move the head node pointer to the next node and change the heads previous to NULL.
                Then dispose of the tempoprary node.
+               
+            DELETE LAST NODE IN DOUBLY ENDED LINKED LIST
+            -> Traverse the list, and while traversing maintain the previous node address. By the time we reach the end of the list , we will 
+               have two pointers , one pointing to the tail and the other opinting to the node before the tail.
+            -> Update the next pointer of previous node to the tail node with NULL.
+            -> Dispose the tail Node.
+            
+            DELETING AN INTERMEDIATE NODE IN DOUBLY LINKED LIST
+            -> Similar tot the previous case , maintain the prevoius node while also traversing the list. Upon locating the node tp be deleted, change
+               the prevoius node's next pointer to the next node of the  node to be deleted . Also,change the previous pointer to the next node to node
+               to be deleted to point to previous node of the node to be deleted.
+            -> Dispose the current node to be deleted.
 
 */
 #include<iostream>
