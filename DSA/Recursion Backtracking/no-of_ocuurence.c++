@@ -1,3 +1,4 @@
+// TO FIND THE FIRST AND LAST OCCURENCE OF AN ELEMENT IN STRING USING RECURSION
 #include<iostream>
 #include<string>
 
