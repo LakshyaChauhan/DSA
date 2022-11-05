@@ -87,6 +87,34 @@ void insertAtFirst(CLLNode** head, int data){
     *head = temp;
 }
 
+void deleteLast(CLLNode** head){
+    CLLNode* current  = *head, *prev;
+    if(*head == NULL){
+        cout<<"List is empty"<<endl;
+        return;
+    }
+    while(current->next != *head){
+        prev =current;
+        current = current->next;
+    }
+    prev->next = *head;
+    free(current);
+}
+void deleteFirst(CLLNode** head){
+    CLLNode* current = *head;
+    if(*head == NULL){
+        cout<<"Empty List";
+        return;
+    }
+    while(current->next != *head){
+        current = current->next;
+    }
+    current->next = (*head)->next;
+    current = *head;
+    *head  = (*head)->next;
+    free(current);
+}
+
 int main(){
     CLLNode * head = (CLLNode*)malloc(sizeof(CLLNode));
     head = NULL;
@@ -110,6 +138,12 @@ int main(){
     insertAtFirst(&head2,1);
     insertAtFirst(&head2,0);
     print(&head2);
+    deleteLast(&head2);
+    print(&head2);
+    deleteFirst(&head2);
+    deleteFirst(&head2);
+    print(&head2);
+
     return 0;
 }
 
