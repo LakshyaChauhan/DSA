@@ -6,7 +6,8 @@
           same amount of time, we have to assure that no process accesses the resource before all other processes do (robin round 
           algorithm).        
 
-
+       APPLICATION -> Circular Linked Lists are used in managing the computing resources of a computer. We can use circular lissts for implenting
+                      stacks and queues.
 
 */
 
